@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    width: 100%;
+    background-color: #424558;
+    text-align: center;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+nav li{
+    list-style-type:none;
+    float: left;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 30px;
+    color: #fff;
+}
+
+nav li:hover a{
+    padding: 15px 30px 20px 30px;
+}
+
+.lien_nav:hover{
+    border-top: 5px solid #e44d26;
+    background-color:RGBa(000, 112,192, 0.15);
+}
+
+
