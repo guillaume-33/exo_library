@@ -14,6 +14,16 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            <nav>
+                <ul>
+                    <li>Accueil</li>
+                    <li>Livres</li>
+                    <li>Auteurs</li>
+                </ul>
+            </nav>
+        </header>
+        {% block main %}
+        {% endblock %}
     </body>
 </html>
