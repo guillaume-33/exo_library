@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+ {% block title %}
+      Dernières sorties
+ {% endblock %}
+{% block main %}
+    <h1> Les derniers livres parus cette semaine</h1>
+    <p>Decouvrez notre selection des derniers articles parus. </p>
+
+    {% for book in dernierBook %}
+        <article>
+            <h2> Titre: {{book.title }}</h2>
+            <h3> Auteur: {{ book.author }}</h3>
+            <p>Nombre de pages: {{ book.nbPages }}</p>
+            <p>Publié le: {{ book.publishedAt|date('d/m/y') }}</p>
+
+        </article>
+    {% endfor %}
+{% endblock %}
