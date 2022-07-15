@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <article>
+        <h2> Titre: {{book.title }}</h2>
+        <p>Nombre de pages: {{ book.nbPages }}</p>
+        <p>Publié le: {{ book.publishedAt|date('d/m/y') }}</p>
+        <p>Auteur: {{ book.author.firstName ~' '~ book.author.lastName}}</p>
+    </article>
+{% endblock %}
