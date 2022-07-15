@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="formulaire_insert">
+        {#    {{ form(form) }}#}
+        {{ form_start (form)}}
+
+        {{ form_label(form.tilte, 'Titre', {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_widget(form.tilte, {'attr': {'class': 'form-book-title-widget'}}) }}
+        {{ form_errors(form.tilte) }}
+
+        {{ form_label(form.bnPages, 'Catégorie', {'label_attr':{'class':'form-label'}}) }}
+        {{ form_widget(form.bnPages, {'attr': {'class':'form-book-bnPages-widget'}}) }}
+
+        {{ form_label(form.author , 'Auteur',{'label_attr':{'class':'form-label' }})}}
+        {{ form_widget(form.author , {'attr': {'class': 'form-book-auteur-widget'}}) }}
+
+        {{ form_label(form.pubishedAT, 'Publication', {'label_attr':{'class':'form-label'}}) }}
+        {{ form_widget(form.pubishedAT, {'attr':{'class':'form-book-pubishedAT-widget'}}) }}
+
+
+        {{ form_label(form.image, 'Image', {'label_attr':{'class':'form-label'}}) }}
+        {{ form_widget(form.image, {'attr': {'class':'form-article-image'}}) }}
+
+        {{ form_widget(form.Confirmer, {'attr': {'class': 'btn '}}) }}
+
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -4,9 +4,9 @@
  {% endblock %}
 {% block main %}
     <h1> Les derniers livres parus cette semaine</h1>
-    <p>Decouvrez notre selection des derniers articles parus. </p>
+    <p>Decouvrez notre selection des derniers articles parus. Nichon Magazine est un must have !!  </p>
 
-    {% for book in dernierBook %}
+    {% for book in books %}
         <article>
             <h2> Titre: {{book.title }}</h2>
             <h3> Auteur: {{ book.author }}</h3>
