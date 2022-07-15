@@ -71,7 +71,7 @@ class AdminBooksController extends AbstractController
         $entityManager->flush(); //on enregistre
 
         $this->addFlash('succes','livre supprimé');//on affiche le message
-        
+
         return $this->redirectToRoute('admin_list_books'); //on retourne a la page des articles
     }
 
@@ -94,6 +94,7 @@ class AdminBooksController extends AbstractController
         return $this->render("Admin/update_book.html.twig",[
             'form'=>$form->createView()
         ]);
+
 
     }
 }

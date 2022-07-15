@@ -1,0 +1,16 @@
+
+{% extends'base.html.twig' %}
+{% block title %}{{author.lastname}}{% endblock %}
+{% block main %}
+    <article class="author">
+        <h2>Nom : {{ author.lastName }}</h2>
+        <p>Prenom: {{ author.firstName }}</p>
+        {% if (author.birthDate) %}
+            <p>Date de naissance: {{ author.birthDate|date('d/m/y') }}</p>
+        {% endif %}
+        {% if(author.deathDate) %}
+            <p>Date de décès:{{ author.deathDate|date('d/m/y')}} </p>
+        {% endif %}
+        <a class="btn" href="{{ path('admin_update_author',{'id':author.id}) }}">Modifier l'auteur</a>
+    </article>
+{% endblock %}

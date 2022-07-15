@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
+    background-color:#FFF9F3;
 }
 nav{
     width: 100%;
@@ -97,7 +97,12 @@ button:hover{
     color: white;
 }
 
-.livre{
+.livre {
+    border: 2px solid black;
+    margin: 1rem;
+    padding: 3rem;
+}
+.author{
     border: 2px solid black;
     margin: 1rem;
     padding: 3rem;
