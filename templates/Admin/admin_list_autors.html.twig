@@ -3,16 +3,15 @@
     Les auteurs
 {% endblock %}
 {% block main %}
-    <h1> Les derniers livres parus cette semaine</h1>
-    <p>Decouvrez notre selection des derniers articles parus. Nichon Magazine est un must have !!  </p>
+    <h1> les auteurs dans la place</h1>
+    <p>Decouvrez notre selection de nos meilleurs auteurs! Marc D est notre préféré:)   </p>
 
     {% for author in authors %}
         <article>
             <h2> Prénom: {{author.firstName }}</h2>
             <h3> Nom: {{ author.lastName }}</h3>
-            <p>Né le: {{ author.birthDate('d/m/y') }}</p>
-            <p>Mort le: {{ author.deathDate('d/m/y') }}</p>
-            <p> Ses livres: {{ author.books }}</p>
+            <p>Né le: {{ author.birthDate|date('d/m/y') }}</p>
+            <p>Mort le: {{ author.deathDate|date('d/m/y') }}</p>
 
         </article>
     {% endfor %}

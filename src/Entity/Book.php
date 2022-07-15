@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\BookRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
@@ -19,16 +21,19 @@ class Book
     #[ORM\Column(length: 255)]
     private ?string $nbPages = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $author = null;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $publishedAt = null;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    #[ORM\ManyToOne(inversedBy: 'books')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Author $author = null;
+
+   
+
+
+
+
 
     public function getTitle(): ?string
     {
@@ -53,18 +58,7 @@ class Book
 
         return $this;
     }
-
-    public function getAuthor(): ?string
-    {
-        return $this->author;
-    }
-
-    public function setAuthor(string $author): self
-    {
-        $this->author = $author;
-
-        return $this;
-    }
+    
 
     public function getPublishedAt(): ?\DateTimeImmutable
     {
@@ -77,4 +71,18 @@ class Book
 
         return $this;
     }
+
+    public function getAuthor(): ?Author
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?Author $author): self
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+
 }
