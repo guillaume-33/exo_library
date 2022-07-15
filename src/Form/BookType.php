@@ -19,7 +19,7 @@ class BookType extends AbstractType
             ->add('nbPages')
             ->add('publishedAt')
             ->add('author',EntityType::class,[
-                "class" =>Author::class,
+                "class" =>Author::class, // pris depuis l'entité, ne pas taper trop vite au clavier !!!
                 'choice_label'=>'firstName',
         ])
         ->add('Confirmer',SubmitType::class);

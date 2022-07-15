@@ -6,5 +6,7 @@
         <p>Nombre de pages: {{ book.nbPages }}</p>
         <p>Publié le: {{ book.publishedAt|date('d/m/y') }}</p>
         <p>Auteur: {{ book.author.firstName ~' '~ book.author.lastName}}</p>
+        <a class="btn" href="{{ path('delete_book', {'id':book.id}) }}">Supprimer le livre</a>
+        <a class="btn" href="{{ path('update_book', {'id':book.id}) }}">Modifier le livre</a>
     </article>
 {% endblock %}

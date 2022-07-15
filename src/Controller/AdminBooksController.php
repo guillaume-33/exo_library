@@ -58,5 +58,42 @@ class AdminBooksController extends AbstractController
     return $this->render('Admin/admin_insert_book.html.twig', [
         'form' => $form->createView()
     ]);
+
+    }
+
+
+    /**
+     * @Route("/admin/delete/book/{id}", name="delete_book")
+     */
+    public function deleteBook($id ,BookRepository $bookRepository,EntityManagerInterface $entityManager){
+        $book= $bookRepository->find($id);
+        $entityManager->remove($book); //on supprime le livre
+        $entityManager->flush(); //on enregistre
+
+        $this->addFlash('succes','livre supprimé');//on affiche le message
+        
+        return $this->redirectToRoute('admin_list_books'); //on retourne a la page des articles
+    }
+
+
+    /**
+     * @Route("/admin/uptdate/book/{id}", name="update_book")
+     */
+    public function updateBook ($id, BookRepository $bookRepository, EntityManagerInterface $entityManager, Request $request)
+    {
+        $book = $bookRepository->find($id);
+
+        $form = $this->createForm(BookType::class, $book);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($book);
+            $entityManager->flush();
+            $this->addFlash('success', 'Livre modifié');
+        }
+        return $this->render("Admin/update_book.html.twig",[
+            'form'=>$form->createView()
+        ]);
+
     }
 }
