@@ -34,7 +34,7 @@ nav li:hover a{
 }
 
 .lien_nav:hover{
-    border-top: 5px solid #e44d26;
+    border-top: 5px solid #FFF9F3;
     background-color:RGBa(000, 112,192, 0.15);
 }
 
@@ -94,7 +94,6 @@ button:hover{
     font-weight: 700;
     color: #424558;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 .btn:hover {
@@ -143,7 +142,14 @@ h1{
     border-radius: 30px;
 }
 
-
+@media screen and (max-width: 768px){
+    #landing{
+        flex-direction: column;
+    }
+    .img_accueil{
+        width: 70vw;
+    }
+}
 
 
 
