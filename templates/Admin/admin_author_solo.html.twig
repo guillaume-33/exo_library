@@ -12,5 +12,6 @@
             <p>Date de décès:{{ author.deathDate|date('d/m/y')}} </p>
         {% endif %}
         <a class="btn" href="{{ path('admin_update_author',{'id':author.id}) }}">Modifier l'auteur</a>
+        <a class="btn" href="{{ path('delete_author',{'id':(author.id)}) }}">Supprimer l'auteur</a>
     </article>
 {% endblock %}

@@ -13,7 +13,8 @@
             <p>Né le: {{ author.birthDate|date('d/m/y') }}</p>
             <p>Mort le: {{ author.deathDate|date('d/m/y') }}</p>
             <a class="btn" href="{{ path('admin_author_solo',{'id':author.id}) }}">Plus sur cet auteur</a>
-
         </article>
+        <a class="btn" href="{{ path('admin_insert_author',{'id':author.id}) }}">Créer auteur</a>
     {% endfor %}
+
 {% endblock %}

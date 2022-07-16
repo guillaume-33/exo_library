@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-
+use App\Entity\Author;
 
 use App\Form\AuthorType;
 use Doctrine\ORM\EntityManager;
@@ -53,7 +53,38 @@ class AdminAuthorController extends AbstractController
        return $this->render('Admin/admin_update_author.html.twig',[
                         "form"=>$form->createView()
         ]);
+    }
 
+    /**
+     * @Route("/admin/delete/author/{id}" , name="delete_author")
+     */
+    public function deleteAuthor($id, EntityManagerInterface $entityManager,AuthorRepository $authorRepository){
+        $author=$authorRepository->find($id); //on cherche par l'id
+        $entityManager->remove($author);//on supprime
+        $entityManager->flush();//on 'sauvegarde'
+        $this->addFlash('succes', 'Auteur supprimé');//message de concirmation
+        return $this->redirectToRoute('admin_list_authors');//on redirige
+    }
+
+    /**
+     * @Route("/admin/insert/author", name="admin_insert_author")
+     */
+    public function createAuthor(EntityManagerInterface $entityManager, Request $request ){
+       $author=new Author();
+
+       $form= $this->createForm(AuthorType::class,$author);
+       $form->handleRequest($request);
+
+       if($form->isSubmitted() && $form->isValid()){
+           $entityManager->persist($author);
+           $entityManager->flush();
+       }
+       $this->addFlash('succes', 'auteur créé!');
+
+        $this->render('Admin/admin_insert_author.html.twig',[
+           'form'=> $form->createView()
+       ]);
+       return $this->redirectToRoute('admin_list_authors');
     }
 }
 
