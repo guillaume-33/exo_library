@@ -82,10 +82,10 @@ class AdminAuthorController extends AbstractController
        }
        $this->addFlash('succes', 'auteur créé!');
 
-        $this->render('Admin/admin_insert_author.html.twig',[
+         return $this->render('Admin/admin_insert_author.html.twig',[
            'form'=> $form->createView()
        ]);
-       return $this->redirectToRoute('admin_list_authors');
+
     }
 
 }

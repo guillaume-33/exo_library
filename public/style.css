@@ -149,6 +149,13 @@ h1{
     .img_accueil{
         width: 70vw;
     }
+    .liens{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn{
+        margin-top: 1rem;
+    }
 }
 
 

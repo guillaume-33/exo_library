@@ -39,6 +39,20 @@ class AuthorRepository extends ServiceEntityRepository
         }
     }
 
+
+    //Commenté par ce que la route de fonctionne pas, voir David
+    ///--------------------------------------------------
+//        public function searchByWord($search){
+//            $bdd=$this->createQueryBuilder('author');
+//            $query=$bdd->select('author')
+//            ->where('author.firstname LIKE:search')
+//            ->setParameter('search','%'.$search.'%')
+//            ->getQuery();
+//            return $query->getResult();
+//        }
+//----------------------------------------------------------
+
+
 //    /**
 //     * @return Author[] Returns an array of Author objects
 //     */

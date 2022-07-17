@@ -16,6 +16,13 @@
     </head>
     <body>
         <header>
+{#            Commenté parce que la route n'est pas prise en compte !#}
+{#            <form action="{{ path ('admin_search_author') }}" method="get" >#}
+{#                <label for="search">Recherche</label>#}
+{#                <input type="text" id="search" name="search">#}
+{#                <button>Rechercher</button>#}
+{#            </form>#}
+
             <nav>
                 <ul>
                     <li class="lien_nav"><a href="{{ path('home') }}">Accueil</a></li>
@@ -23,6 +30,7 @@
                     <li class="lien_nav"><a href="{{ path('admin_list_authors') }}">Auteurs</a></li>
                 </ul>
             </nav>
+
         </header>
         {% for message in app.flashes('success') %}
             <div class="alert-success">
