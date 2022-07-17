@@ -88,6 +88,22 @@ class AdminAuthorController extends AbstractController
 
     }
 
+
+    /**
+     * @Route("/admin/author/search",name="admin_search_author")
+     */
+    public function searchAuthor(Request $request, AuthorRepository $authorRepository){
+
+        $search= $request->query->get('search');//recupere les info en GET
+
+    //methode pour trouvé ce qu'on cherche via le mot tapé grace a 'searchByWord" Via "AuthorRepository"
+        $author=$authorRepository->searchByWord($search);
+
+        return $this->render('Admin/admin_search_author.html.twig',[
+            'author'=>$author
+        ]);// j'affiche le resultat sur la page
+    }
+
 }
 
 
