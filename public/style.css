@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-color:#FFF9F3;
+
 }
 nav{
     width: 100%;
@@ -135,6 +136,7 @@ h1{
     width: 75vw;
     margin: auto;
     display: flex;
+    background:#FFF9F3;
 
 }
 .vue_gauche{
@@ -149,6 +151,10 @@ h1{
     border-radius: 30px;
 }
 
+.author{
+    background-color:#FFF9F3;
+}
+
 
 
 
@@ -158,6 +164,8 @@ h1{
     }
     .img_accueil{
         width: 70vw;
+        height: auto;
+        margin: auto;
     }
     .liens{
         display: flex;
