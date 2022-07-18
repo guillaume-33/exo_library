@@ -45,7 +45,7 @@ class AuthorRepository extends ServiceEntityRepository
 
             $bdd=$this->createQueryBuilder('author');//remplace la requete SQL
             $query=$bdd->select('author')//on definie dans quelle table de la BBD on cherche
-            ->where('author.firstname LIKE:search') //on definie dans quel colone on cherche
+            ->where('author.firstName LIKE :search') //on definie dans quel colone on cherche
             ->setParameter('search','%'.$search.'%')// les % permettent de ne pas limite la recherche
             ->getQuery(); //on recupere la requete
             return $query->getResult();//on valide la requete

@@ -5,16 +5,16 @@
 {% block main %}
     <h1> les auteurs dans la place</h1>
     <p>Decouvrez notre selection de nos meilleurs auteurs! Marc D est notre préféré:)   </p>
-
+    <a class="btn" href="{{ path('admin_insert_author') }}">Créer auteur</a>
     {% for author in authors %}
         <article class="author">
             <h2> Prénom: {{author.firstName }}</h2>
             <h3> Nom: {{ author.lastName }}</h3>
-            <p>Né le: {{ author.birthDate|date('d/m/y') }}</p>
-            <p>Mort le: {{ author.deathDate|date('d/m/y') }}</p>
+            <p>Né le: {{ author.birthDate|date('d/m/Y') }}</p>
+            <p>Mort le: {{ author.deathDate|date('d/m/Y') }}</p>
             <a class="btn" href="{{ path('admin_author_solo',{'id':author.id}) }}">Plus sur cet auteur</a>
         </article>
-        <a class="btn" href="{{ path('admin_insert_author',{'id':author.id}) }}">Créer auteur</a>
+
     {% endfor %}
 
 {% endblock %}
