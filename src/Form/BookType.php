@@ -18,7 +18,9 @@ class BookType extends AbstractType
         $builder
             ->add('title')
             ->add('nbPages')
-            ->add('publishedAt')
+            ->add('publishedAt', DateType::class,[
+                        'widget'=>'single_text'
+            ])
             ->add('author',EntityType::class,[
                 "class" =>Author::class, // pris depuis l'entité, ne pas taper trop vite au clavier !!!
                 'choice_label'=>'firstName',

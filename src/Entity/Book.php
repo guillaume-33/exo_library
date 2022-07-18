@@ -21,9 +21,8 @@ class Book
     #[ORM\Column(length: 255)]
     private ?string $nbPages = null;
 
-
-    #[ORM\Column]
-    private ?\DateTimeImmutable $publishedAt = null;
+    #[ORM\Column(type: 'date', nullable: true)]
+    private $publishedAt = null;
 
     #[ORM\ManyToOne(inversedBy: 'books')]
     #[ORM\JoinColumn(nullable: false)]
@@ -62,12 +61,12 @@ public function getId(): int
     }
     
 
-    public function getPublishedAt(): ?\DateTimeImmutable
+    public function getPublishedAt()
     {
         return $this->publishedAt;
     }
 
-    public function setPublishedAt(\DateTimeImmutable $publishedAt): self
+    public function setPublishedAt( $publishedAt): self
     {
         $this->publishedAt = $publishedAt;
 

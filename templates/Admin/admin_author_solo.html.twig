@@ -6,10 +6,10 @@
         <h2>Nom : {{ author.lastName }}</h2>
         <p>Prenom: {{ author.firstName }}</p>
         {% if (author.birthDate) %}
-            <p>Date de naissance: {{ author.birthDate|date('d/m/y') }}</p>
+            <p>Date de naissance: {{ author.birthDate|date('d/m/Y') }}</p>
         {% endif %}
         {% if(author.deathDate) %}
-            <p>Date de décès:{{ author.deathDate|date('d/m/y')}} </p>
+            <p>Date de décès:{{ author.deathDate|date('d/m/Y')}} </p>
         {% endif %}
         <a class="btn" href="{{ path('admin_update_author',{'id':author.id}) }}">Modifier l'auteur</a>
         <a class="btn" href="{{ path('delete_author',{'id':(author.id)}) }}">Supprimer l'auteur</a>

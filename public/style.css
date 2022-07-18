@@ -38,6 +38,12 @@ nav li:hover a{
     border-top: 5px solid #FFF9F3;
     background-color:RGBa(000, 112,192, 0.15);
 }
+.form_search{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    margin-left: 2rem;
+}
 
 footer{
     background-color: #424558;
@@ -138,16 +144,13 @@ h1{
 }
 .img_accueil{
     width: 20vw;
+    height: 30vh;
     margin: 1rem;
     border-radius: 30px;
 }
 
-.form_search{
-    display: flex;
-    align-items: center;
-    width: 250px;
-    margin-left: 2rem;
-}
+
+
 
 @media screen and (max-width: 768px){
     #landing{
