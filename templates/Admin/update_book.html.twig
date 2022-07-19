@@ -2,7 +2,39 @@
 {% block title %}{{'Mofication du livre'}}{% endblock %}
 {% block main %}
     <div class="formulaire_insert">
-        {{ form(form) }}
-    </div>
+{#        {{ form(form) }}#}
+
+            {{ form_start (form)}}
+
+            {{ form_label(form.title, 'Titre', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(form.title, {'attr': {'class': 'form-book-title-widget'}}) }}
+
+
+            {{ form_label(form.nbPages , 'Nombre de pages',{'label_attr':{'class':'form-label' }})}}
+            {{ form_widget(form.nbPages , {'attr': {'class': 'form-book-NbPages-widget'}}) }}
+
+
+            {{ form_label(form.publishedAt, 'Date publication', {'label_attr':{'class':'form-label'}}) }}
+            {{ form_widget(form.publishedAt, {'attr':{'class':'form-book-pubishedAt-widget'}}) }}
+
+            {{ form_label(form.author, 'Auteur', {'label_attr':{'class':'form-label'}}) }}
+            {{ form_widget(form.author, {'attr': {'class':'form-book-author'}}) }}
+
+            <div>
+                {% if book.image %}
+                    <img class="article-img" src="{{ asset('uploads/images/' ~ book.image)  }}" alt="{{ book.title }}">
+                {% endif %}
+            </div>
+
+            {{ form_label(form.image) }}
+            {{ form_widget(form.image) }}
+
+            {{ form_widget(form.Confirmer, {'attr': {'class': 'btn '}}) }}
+
+            {{ form_end(form) }}
+
+
+        </div>
+
 
 {% endblock %}

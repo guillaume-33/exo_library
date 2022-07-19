@@ -8,7 +8,6 @@
     <a class="btn" href="{{ path('admin_insert_book') }}">Ajouter un livre</a>
     {% for book in books %}
         <article class="livre">
-
             <h2> Titre: {{book.title }}</h2>
             <p>Nombre de pages: {{ book.nbPages }}</p>
             <p>Publié le: {{ book.publishedAt|date('d/m/y') }}</p>
@@ -21,7 +20,6 @@
                 <a class="btn" href="{{ path('delete_book', {'id':book.id}) }}">Supprimer le livre</a>
                 <a class="btn" href="{{ path('update_book', {'id':book.id}) }}">Modifier le livre</a>
             </div>
-
         </article>
     {% endfor %}
 {% endblock %}

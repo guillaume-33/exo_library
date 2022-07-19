@@ -67,7 +67,6 @@ class AdminBooksController extends AbstractController
                 $this->getParameter('images_directory'),
                 $newFilename
             );
-
             $book->setImage($newFilename);
         }
 
@@ -100,7 +99,7 @@ class AdminBooksController extends AbstractController
     /**
      * @Route("/admin/uptdate/book/{id}", name="update_book")
      */
-    public function updateBook ($id, BookRepository $bookRepository, EntityManagerInterface $entityManager, Request $request)
+    public function updateBook ($id, BookRepository $bookRepository, EntityManagerInterface $entityManager, Request $request,SluggerInterface $slugger)
     {
         $book = $bookRepository->find($id);
 
@@ -110,11 +109,33 @@ class AdminBooksController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($book);
             $entityManager->flush();
+
+
+            $image=$form->get('image')->getData();
+
+            $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+
+            //j'utilise une l'instance 'Slug" la classe SluggerInterface pour supprimer les caractères sépciaux etc du nom du fichier
+            $safeFilename = $slugger->slug($originalFilename);
+
+            //je rajoute un identifiant au nom de l'image pour le rendre unique ( poueviter les conflits avec d'autres nom)
+            $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
+
+            //j'enregistre l'image dans un dossier public avec son nouveau nom unique
+            $image->move(
+                $this->getParameter('images_directory'),
+                $newFilename
+            );
+            $book->setImage($newFilename);
+            // alors on enregistre l'article en BDD
+            $entityManager->persist($book);
+            $entityManager->flush();
             $this->addFlash('success', 'Livre modifié');
         }
-        return $this->render("Admin/update_book.html.twig",[
-            'form'=>$form->createView()
-        ]);
 
+        return $this->render("Admin/update_book.html.twig",[
+            'form'=>$form->createView(),
+            'book'=>$book
+        ]);
     }
 }
