@@ -10,6 +10,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 
 class AdminBooksController extends AbstractController
@@ -41,7 +42,7 @@ class AdminBooksController extends AbstractController
         /**
          * @Route("/admin/insert/book" , name="admin_insert_book")
          */
-    public function insertBook(EntityManagerInterface $entityManager , Request $request)
+    public function insertBook(EntityManagerInterface $entityManager , Request $request, SluggerInterface $slugger)
     {
         $book = new Book();
     //avant toute chose, on créé le gabarit du form via cmd : php bon/console makde:form ( ce qui va créer le type BookType)
@@ -49,6 +50,26 @@ class AdminBooksController extends AbstractController
         $form = $this->createForm(BookType::class, $book);
 
         $form->handleRequest($request);
+
+        $image=$form->get('image')->getData();
+        if ($image) {
+            $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+            // this is needed to safely include the file name as part of the URL
+
+            //j'utilise une l'instance 'Slug" la classe SluggerInterface pour supprimer les caractères sépciaux etc du nom du fichier
+            $safeFilename = $slugger->slug($originalFilename);
+
+            //je rajoute un identifiant au nom de l'image pour le rendre unique ( poueviter les conflits avec d'autres nom)
+            $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
+
+            //j'enregistre l'image dans un dossier public avec son nouveau nom unique
+            $image->move(
+                $this->getParameter('images_directory'),
+                $newFilename
+            );
+
+            $book->setImage($newFilename);
+        }
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($book);
