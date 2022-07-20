@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+ {% block main %}
+     {% for author in authors %}
+         <article class="author">
+             <h2> Prénom: {{author.firstName }}</h2>
+             <h3> Nom: {{ author.lastName }}</h3>
+             <p>Né le: {{ author.birthDate|date('d/m/y') }}</p>
+             <p>Mort le: {{ author.deathDate|date('d/m/y') }}</p>
+         </article>
+     {% endfor %}
+ {% endblock %}

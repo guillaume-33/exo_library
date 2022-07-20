@@ -21,15 +21,15 @@
 
 
             <nav>
-                <form class="form_search" action="{{ path ('admin_search_author') }}" method="get" >
+                <form class="form_search" action="{{ path ('search_author') }}" method="get" >
                     <label for="search">auteur: </label>
                     <input type="text" id="search" name="search">
                     <button> Rechercher</button>
                 </form>
                 <ul>
                     <li class="lien_nav"><a href="{{ path('home') }}">Accueil</a></li>
-                    <li class="lien_nav"><a href="{{ path('admin_list_books') }}">Livres</a></li>
-                    <li class="lien_nav"><a href="{{ path('admin_list_authors') }}">Auteurs</a></li>
+{#                    <li class="lien_nav"><a href="{{ path('list_books') }}">Livres</a></li>#}
+                    <li class="lien_nav"><a href="{{ path('list_authors') }}">Auteurs</a></li>
                     <li class="lien_nav"><a href="{{ path('app_login') }}">Connexion</a></li>
                     <li class="lien_nav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
 
