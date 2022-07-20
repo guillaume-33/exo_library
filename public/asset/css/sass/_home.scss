@@ -1,0 +1,33 @@
+h1{
+  text-align: center;
+}
+
+
+#landing{
+  border: 2px solid black;
+  border-radius: 30px;
+  width: 75vw;
+  margin: auto;
+  display: flex;
+  background:#FFF9F3;
+
+}
+.vue_gauche{
+  margin: auto;
+  padding: 2rem;
+
+}
+.img_accueil{
+  width: 20vw;
+  height: 30vh;
+  margin: 1rem;
+  border-radius: 30px;
+}
+footer{
+  background-color: #424558;
+  height: 5rem;
+}
+.succes{
+  font-size: 30px;
+  background-color: green;
+}

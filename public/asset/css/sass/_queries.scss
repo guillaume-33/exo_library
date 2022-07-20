@@ -1,0 +1,26 @@
+@media screen and (max-width: 768px){
+  #landing{
+    flex-direction: column;
+  }
+  .img_accueil{
+    width: 70vw;
+    height: auto;
+    margin: auto;
+  }
+  .liens{
+    display: flex;
+    flex-direction: column;
+  }
+  .btn{
+    margin-top: 1rem;
+  }
+  nav{
+    flex-direction: column;
+  }
+  nav ul{
+    margin: auto;
+  }
+  .form_search{
+    margin:auto;
+  }
+}
