@@ -1,0 +1,19 @@
+{% extends'base.html.twig' %}
+
+{% block main %}
+    {% for book in books %}
+        <article class="livre">
+            <h2> Titre: {{book.title }}</h2>
+            <p>Nombre de pages: {{ book.nbPages }}</p>
+            <p>Publié le: {{ book.publishedAt|date('d/m/y') }}</p>
+            <p>Auteur: {{ book.author.firstName ~' '~ book.author.lastName}}</p>
+            {% if(book.image) %}
+                <img src=" {{asset('uploads/images/'~book.image) }}" alt="une photo">
+            {% endif %}
+            <div class="liens">
+                <a class="btn" href="{{ path('solo_book', {'id':book.id}) }}">En savoir plus</a>
+
+            </div>
+        </article>
+    {% endfor %}
+{% endblock %}
