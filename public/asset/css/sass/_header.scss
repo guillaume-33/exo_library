@@ -7,20 +7,20 @@ body {
       background-color: #424558;
       text-align: center;
       display: flex;
-    }ul {
-     margin: 0;
-     padding: 0;
-     overflow: hidden;
-     margin-left: 45vw;
-     }li {
-      list-style-type: none;
-      float: left;
-      }a {
-       display: inline-block;
-       text-decoration: none;
-       padding: 20px 30px;
-       color: #fff;
-     }
+      }ul {
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       margin-left: 45vw;
+       }li {
+        list-style-type: none;
+        float: left;
+        }a {
+         display: inline-block;
+         text-decoration: none;
+         padding: 20px 30px;
+         color: #fff;
+       }
 }
 nav li:hover a {
   padding: 15px 30px 20px 30px;
