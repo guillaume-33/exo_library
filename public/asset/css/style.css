@@ -1,57 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #FFF9F3;
-}
-
-nav {
-  width: 100%;
-  background-color: #424558;
-  text-align: center;
-  display: flex;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  margin-left: 45vw;
-}
-
-nav li {
-  list-style-type: none;
-  float: left;
-}
-
-nav a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 20px 30px;
-  color: #fff;
-}
-
-nav li:hover a {
-  padding: 15px 30px 20px 30px;
-}
-
-.lien_nav:hover {
-  border-top: 5px solid #FFF9F3;
-  background-color: RGBa(0, 112, 192, 0.15);
-}
-
-.form_search {
-  display: flex;
-  align-items: center;
-  width: 250px;
-  margin-left: 2rem;
-}
-
-footer {
-  background-color: #424558;
-  height: 5rem;
-}
-
-/*Css Formulaire*/
 input {
   display: block;
   width: 100%;
@@ -90,6 +36,13 @@ button:hover {
   cursor: pointer;
 }
 
+.form_search {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  margin-left: 2rem;
+}
+
 /*Css Buttons*/
 .btn {
   margin-top: 5rem;
@@ -105,6 +58,48 @@ button:hover {
 .btn:hover {
   background-color: #424558;
   color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF9F3;
+}
+body nav {
+  width: 100%;
+  background-color: #424558;
+  text-align: center;
+  display: flex;
+}
+body ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-left: 45vw;
+}
+body li {
+  list-style-type: none;
+  float: left;
+}
+body a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px 30px;
+  color: #fff;
+}
+
+nav li:hover a {
+  padding: 15px 30px 20px 30px;
+}
+
+.lien_nav:hover {
+  border-top: 5px solid #FFF9F3;
+  background-color: RGBa(0, 112, 192, 0.15);
+}
+
+footer {
+  background-color: #424558;
+  height: 5rem;
 }
 
 .livre {

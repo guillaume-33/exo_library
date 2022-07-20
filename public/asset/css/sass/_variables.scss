@@ -1,0 +1,7 @@
+$color:#fff;
+
+@mixin cadre {
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 3rem;
+}

@@ -1,0 +1,87 @@
+@import "sass/form";
+@import 'sass/btn';
+@import 'sass/header';
+@import 'sass/variables';
+
+
+
+footer{
+    background-color: #424558;
+    height: 5rem;
+}
+
+
+.livre{
+    @include cadre;
+}
+.author{
+ @include cadre;
+}
+
+.succes{
+    font-size: 30px;
+    background-color: green;
+}
+
+h1{
+    text-align: center;
+}
+
+
+#landing{
+    border: 2px solid black;
+    border-radius: 30px;
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    background:#FFF9F3;
+
+}
+.vue_gauche{
+    margin: auto;
+    padding: 2rem;
+
+}
+.img_accueil{
+    width: 20vw;
+    height: 30vh;
+    margin: 1rem;
+    border-radius: 30px;
+}
+
+.author{
+    background-color:#FFF9F3;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    #landing{
+        flex-direction: column;
+    }
+    .img_accueil{
+        width: 70vw;
+        height: auto;
+        margin: auto;
+    }
+    .liens{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn{
+        margin-top: 1rem;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        margin: auto;
+    }
+    .form_search{
+        margin:auto;
+    }
+}
+
+
+

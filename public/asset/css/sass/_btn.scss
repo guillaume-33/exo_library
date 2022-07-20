@@ -1,0 +1,16 @@
+/*Css Buttons*/
+.btn {
+  margin-top: 5rem;
+  display: inline;
+  border: solid 1px #424558;
+  padding: 7px 20px;
+  border-radius: 3px;
+  font-weight: 700;
+  color: #424558;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #424558;
+  color: white;
+}
