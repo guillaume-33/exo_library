@@ -15,10 +15,8 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="js_body">
         <header>
-
-
 
             <nav>
                 <form class="form_search" action="{{ path ('search_author') }}" method="get" >
@@ -31,12 +29,8 @@
                     <li class="lien_nav"><a href="{{ path('list_books') }}">Livres</a></li>
                     <li class="lien_nav"><a href="{{ path('list_authors') }}">Auteurs</a></li>
                     <li class="lien_nav"><a href="{{ path('app_login') }}">Connexion</a></li>
-
-
-
-
-
                 </ul>
+                <button class="js_dark_mode">Dark mode</button>
             </nav>
 
 
@@ -53,5 +47,6 @@
         <footer>
             <h2>je suis un footer!</h2>
         </footer>
+        <script src="{{ asset('javaScript/script.js') }}"></script>
     </body>
 </html>

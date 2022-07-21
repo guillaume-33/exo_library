@@ -18,8 +18,6 @@
 <body class="js_body">
 <header>
 
-
-
     <nav>
         <form class="form_search" action="{{ path ('admin_search_author') }}" method="get" >
             <label for="search">auteur: </label>
@@ -34,7 +32,7 @@
             <li class="lien_nav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
             <li class="lien_nav"><a href="{{ path('admin_list_admins') }}">Les Admins</a></li>
         </ul>
-        <button class="js_dark_mode">Dark <mode></mode></button>
+        <button class="js_dark_mode">Dark mode</button>
     </nav>
     <p>Bonjour {{ app.user.email }}</p>
 
