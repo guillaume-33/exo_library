@@ -15,7 +15,7 @@
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
 </head>
-<body>
+<body class="js_body">
 <header>
 
 
@@ -33,8 +33,8 @@
             <li class="lien_nav"><a href="{{ path('admin_list_authors') }}">Auteurs</a></li>
             <li class="lien_nav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
             <li class="lien_nav"><a href="{{ path('admin_list_admins') }}">Les Admins</a></li>
-
         </ul>
+        <button class="js_dark_mode">Dark <mode></mode></button>
     </nav>
     <p>Bonjour {{ app.user.email }}</p>
 
@@ -52,5 +52,7 @@
 <footer>
     <h2>je suis un footer!</h2>
 </footer>
+<script src="{{ asset('javaScript/script.js') }}"></script>
 </body>
+
 </html>
