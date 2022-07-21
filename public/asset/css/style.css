@@ -72,10 +72,9 @@ body nav {
   display: flex;
 }
 body ul {
-  margin: 0;
   padding: 0;
   overflow: hidden;
-  margin-left: 45vw;
+  margin-left: 35vw;
 }
 body li {
   list-style-type: none;

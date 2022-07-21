@@ -27,20 +27,19 @@
             <button> Rechercher</button>
         </form>
         <ul>
-            <li>Bonjour {{ app.user.email }}</li>
+
             <li class="lien_nav"><a href="{{ path('admin_home') }}">Accueil</a></li>
             <li class="lien_nav"><a href="{{ path('admin_list_books') }}">Livres</a></li>
             <li class="lien_nav"><a href="{{ path('admin_list_authors') }}">Auteurs</a></li>
             <li class="lien_nav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
-
-
-
+            <li class="lien_nav"><a href="{{ path('admin_list_admins') }}">Les Admins</a></li>
 
         </ul>
     </nav>
-
+    <p>Bonjour {{ app.user.email }}</p>
 
 </header>
+
 {% for message in app.flashes('success') %}
     <div class="alert-success">
         {{ message }}
