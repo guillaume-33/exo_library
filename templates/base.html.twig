@@ -18,7 +18,7 @@
     <body class="js_body">
         <header>
 
-            <nav>
+            <nav class="desktop">
                 <form class="form_search" action="{{ path ('search_author') }}" method="get" >
                     <label for="search">auteur: </label>
                     <input type="text" id="search" name="search">
@@ -32,6 +32,21 @@
                 </ul>
                 <button class="js_dark_mode">Dark mode</button>
             </nav>
+
+            {#            <nav class="mobil">#}
+            {#                <form class="form_search" action="{{ path ('search_author') }}" method="get" >#}
+            {#                    <label for="search">auteur: </label>#}
+            {#                    <input type="text" id="search" name="search">#}
+            {#                    <button> Rechercher</button>#}
+            {#                </form>#}
+            {#                <ul>#}
+            {#                    <li class="lien_nav"><a href="{{ path('home') }}">Accueil</a></li>#}
+            {#                    <li class="lien_nav"><a href="{{ path('list_books') }}">Livres</a></li>#}
+            {#                    <li class="lien_nav"><a href="{{ path('list_authors') }}">Auteurs</a></li>#}
+            {#                    <li class="lien_nav"><a href="{{ path('app_login') }}">Connexion</a></li>#}
+            {#                </ul>#}
+            {#                <button class="js_dark_mode">Dark mode</button>#}
+            {#            </nav>#}
 
 
         </header>

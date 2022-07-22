@@ -18,14 +18,13 @@
 <body class="js_body">
 <header>
 
-    <nav>
+    <nav class="desktop">
         <form class="form_search" action="{{ path ('admin_search_author') }}" method="get" >
             <label for="search">auteur: </label>
             <input type="text" id="search" name="search">
             <button> Rechercher</button>
         </form>
         <ul>
-
             <li class="lien_nav"><a href="{{ path('admin_home') }}">Accueil</a></li>
             <li class="lien_nav"><a href="{{ path('admin_list_books') }}">Livres</a></li>
             <li class="lien_nav"><a href="{{ path('admin_list_authors') }}">Auteurs</a></li>
@@ -33,7 +32,31 @@
             <li class="lien_nav"><a href="{{ path('admin_list_admins') }}">Les Admins</a></li>
         </ul>
         <button class="js_dark_mode">Dark mode</button>
+
     </nav>
+    <nav class="mobile">
+    <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">&times;</a>
+        <ul>
+            <li class="lien_nav"><a href="{{ path('admin_home') }}">Accueil</a></li>
+            <li class="lien_nav"><a href="{{ path('admin_list_books') }}">Livres</a></li>
+            <li class="lien_nav"><a href="{{ path('admin_list_authors') }}">Auteurs</a></li>
+            <li class="lien_nav"><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+            <li class="lien_nav"><a href="{{ path('admin_list_admins') }}">Les Admins</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <a href="#" id="openBtn">
+  <span class="burger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+    </a>
+
+
+
     <p>Bonjour {{ app.user.email }}</p>
 
 </header>

@@ -8,13 +8,15 @@ body {
       text-align: center;
       display: flex;
       }ul {
-
+      display: flex;
        padding: 0;
        overflow: hidden;
-       margin-left: 35vw;
+       margin-left: 15vw;
        }li {
+        display: inline;
         list-style-type: none;
         float: left;
+        justify-content: center;
         }a {
          display: inline-block;
          text-decoration: none;
@@ -29,4 +31,8 @@ nav li:hover a {
 .lien_nav:hover {
   border-top: 5px solid #FFF9F3;
   background-color: RGBa(0, 112, 192, 0.15);
+}
+*
+.mobile{
+  display: none;
 }

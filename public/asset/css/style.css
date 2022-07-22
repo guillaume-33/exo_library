@@ -72,13 +72,16 @@ body nav {
   display: flex;
 }
 body ul {
+  display: flex;
   padding: 0;
   overflow: hidden;
-  margin-left: 35vw;
+  margin-left: 15vw;
 }
 body li {
+  display: inline;
   list-style-type: none;
   float: left;
+  justify-content: center;
 }
 body a {
   display: inline-block;
@@ -94,6 +97,10 @@ nav li:hover a {
 .lien_nav:hover {
   border-top: 5px solid #FFF9F3;
   background-color: RGBa(0, 112, 192, 0.15);
+}
+
+* .mobile {
+  display: none;
 }
 
 .author {
@@ -151,6 +158,9 @@ footer {
   #landing {
     flex-direction: column;
   }
+  .desktop {
+    display: none;
+  }
   .img_accueil {
     width: 70vw;
     height: auto;
@@ -171,6 +181,57 @@ footer {
   }
   .form_search {
     margin: auto;
+  }
+  .mobile {
+    display: block;
+  }
+  /* Sidenav menu */
+  .sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+  }
+  .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+  }
+  /* Sidenav menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #111;
+  }
+  /* Active class */
+  .sidenav.active {
+    left: 0;
+  }
+  /* Close btn */
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  .burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
   }
 }
 .night {
