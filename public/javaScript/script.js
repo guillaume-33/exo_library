@@ -11,7 +11,7 @@ dark.addEventListener('click', function (){
 
    if(body.classList.contains('night')){ //si le body as deja la classe night,
       body.classList.remove('night')// je lui enleve
-      localStorage.removeItem('night'); // je l'active dans le local storage
+      localStorage.removeItem('night'); // je le desactive dans le local storage
    }else {
       body.classList.add('night');//sinon, je lui ajoute
       localStorage.setItem('night', 'true');//je le sauvegarde en local storage
