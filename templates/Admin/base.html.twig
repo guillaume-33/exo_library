@@ -18,7 +18,7 @@
 <body class="js_body">
 <header>
 
-    <nav class="desktop">
+    <nav class="desktop"> {# en display none en vue mobile #}
         <form class="form_search" action="{{ path ('admin_search_author') }}" method="get" >
             <label for="search">auteur: </label>
             <input type="text" id="search" name="search">
@@ -34,7 +34,7 @@
         <button class="js_dark_mode">Dark mode</button>
 
     </nav>
-    <nav class="mobile">
+    <nav class="mobile">{# diplay none en vue desktop  et bloc en vue mobile #}
     <div id="mySidenav" class="sidenav">
         <a id="closeBtn" href="#" class="close">&times;</a>
         <ul>

@@ -99,8 +99,17 @@ nav li:hover a {
   background-color: RGBa(0, 112, 192, 0.15);
 }
 
-* .mobile {
+.mobile {
   display: none;
+}
+
+.js_dark_mode {
+  padding: 10px;
+  border: none;
+  background-color: #424558;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
 }
 
 .author {
