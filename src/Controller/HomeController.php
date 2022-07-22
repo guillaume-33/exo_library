@@ -19,4 +19,14 @@ public function home(){
     public function adminHome(){
         return $this->render('Admin/admin_home.html.twig');
     }
+
+
+    /**
+     * @Route("/accueil" , name="accueil")
+     */
+    public function landingPage(){
+    return $this->render('Landing/acceuil.html.twig');
+    }
+
+
 }
