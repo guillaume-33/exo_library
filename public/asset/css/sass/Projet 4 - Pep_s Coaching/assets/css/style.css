@@ -1,0 +1,564 @@
+@font-face {
+    font-family: "Roboto-regular";
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(../font/Roboto-Bold.ttf);
+}
+
+body {
+    margin: auto;
+    font-family: "Roboto-regular", Arial, Helvetica, sans-serif;
+}
+
+section {
+    margin-top: 3rem;
+}
+
+/* haut de la page ---menu nav */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header ul li {
+    display: inline;
+    align-content: space-between;
+    padding: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header ul li:before {
+    content: " | ";
+}
+
+nav ul li:first-child:before {
+    content: normal;
+}
+
+.logo_menu {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 40%;
+}
+
+
+/* fin haut de page */
+/* -- debut body-- */
+
+.separateur {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* premiere section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/photo-1556139943-4bdca53adf1e\ 1.jpg);
+    background-size: cover;
+    height: 50vh;
+}
+
+.titre_contact {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0 10%;
+}
+
+.btn_contact {
+    background-color: #ff4676;
+    color: white;
+    border: #ff4676 1px solid;
+    border-radius: 3px;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+
+.btn_contact:hover {
+    background-color: white;
+    color: #ff4676;
+
+}
+
+
+/* fin premeire section */
+/* deuxieme section */
+#deuxieme_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titre_approche {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.p_approche {
+    text-align: center;
+}
+
+/* fin deuxieme section */
+/* troisieme section */
+
+.vous_etes {
+    display: flex;
+    overflow: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.vous_etes_img {
+    float: left;
+    padding-right: 20px;
+    margin-right: 3rem;
+}
+
+.liste_vous_etes {
+    overflow: auto;
+}
+
+/* fin troisieme section */
+
+
+/* debut quatrieme section */
+
+#quatrieme_section {
+    display: flex;
+}
+
+.titre_quatrieme_section {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem;
+}
+
+.paragraphe_quatriemle_section {
+    text-align: center;
+}
+
+span {
+    font-weight: 600;
+}
+
+.btn_4 {
+    text-align: center;
+}
+
+.btn_quatrieme_section {
+    margin-top: 5rem;
+    display: inline;
+    border: solid 1px #ff4676;
+    padding: 7px 20px;
+    border-radius: 3px;
+    font-weight: 700;
+    color: #ff4676;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn_quatrieme_section:hover {
+    background-color: #ff4676;
+    color: white;
+}
+
+/* fin quatrieme section */
+/* debut cinquieme section*/
+
+.widget-section5 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5rem;
+    justify-content: center;
+}
+
+.comprendre {
+    width: 45%;
+    text-align: center;
+}
+
+.reprendre {
+    width: 45%;
+    text-align: center;
+}
+
+.potentiel {
+    width: 45%;
+    text-align: center;
+}
+
+.donner {
+    width: 45%;
+    text-align: center;
+}
+
+.logo_coeur {
+    height: 55px;
+    width: 55px;
+}
+
+.poignee_main {
+    height: 55px;
+    width: 55px;
+}
+
+.fusee {
+    height: 55px;
+    width: 55px;
+}
+
+.puzzle {
+    height: 55px;
+    width: 55px;
+}
+
+.para_widget {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* fin cinquieme section */
+/* debut sixieme section */
+
+.sixieme_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titre_section6 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pragraphe1_section6 {
+    text-align: center;
+
+}
+
+.paragraphe2_section6 {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* fin sixieme section */
+/* debut septieme section */
+
+.peps_ta {
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.talents {
+
+    text-align: center;
+}
+
+.carriere {
+
+    text-align: center;
+}
+
+.force {
+
+    text-align: center;
+}
+
+.titre_section7 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 2rem;
+    text-align: center;
+}
+
+
+.titre_talent::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-color: #84D6EB;
+    margin-top: -8%;
+}
+
+.titre_carriere::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-color: #FFE17A;
+    margin-top: -8%;
+}
+
+.titre_force::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-color: #CD84EB;
+    margin-top: -5%;
+}
+
+
+.btn_septieme_section {
+
+    border: solid 1px #ff4676;
+    padding: 7px 20px;
+    border-radius: 3px;
+    font-weight: 700;
+    color: #ff4676;
+    text-decoration: none;
+}
+
+.btn_septieme_section:hover {
+    background-color: #ff4676;
+    color: white;
+}
+
+/* fin septieme section */
+/* debut huitieme section */
+.huitieme_section {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.vign_section8 {
+    display: flex;
+    flex-direction: row;
+}
+
+.titre1_section8 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.vign {
+    width: 30%;
+    border: 1px solid #3bd8c5;
+    margin: 10px;
+    text-align: center;
+}
+
+.img_vign {
+    margin-top: -50px;
+    border: 8px white solid;
+}
+
+.titre_section8 {
+    text-transform: uppercase;
+}
+
+.vign p {
+    text-align: center;
+    margin: 2rem;
+}
+
+/* fin de section 8 */
+/* debut section blog */
+
+.arcticle_blog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.para_blog {
+    text-align: center;
+    margin: 2rem;
+}
+
+.titre_blog {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.super_pouvoir {
+    display: flex;
+    margin-left: 10%;
+}
+
+.activer {
+    display: flex;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+.zeubi {
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+    margin-right: 10rem;
+}
+
+.separation {
+    height: 0.5px;
+    background-color: #3bd8c5;
+    border: #3bd8c5 1px solid;
+    width: 80vw;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.btn_section9 {
+    border: solid 1px #ff4676;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 700;
+    color: #ff4676;
+    text-decoration: none;
+}
+
+.btn_section9:hover {
+    background-color: #ff4676;
+    color: white;
+}
+
+/* fin section blog */
+/* footer */
+footer {
+    background-color: rgb(206, 204, 204);
+}
+
+.banniere_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.logo_footer {
+    margin-left: 25%;
+
+}
+
+footer div p {
+    margin-right: 25%;
+}
+
+.contact_footer {
+    border-left: 1px solid black;
+    padding-left: 3rem;
+}
+
+
+
+/* media queries */
+@media screen and (max-width:768px) {
+
+    .logo_menu {
+        display: flex;
+        align-items: center;
+        margin-left: 50%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .widget-section5 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vous_etes_img {
+        max-width: 100%;
+    }
+
+    .comprendre {
+        width: 80%;
+    }
+
+    .reprendre {
+        width: 80%;
+    }
+
+    .potentiel {
+        width: 80%;
+    }
+
+    .donner {
+        width: 80%;
+    }
+
+    .peps_ta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vign_section8 {
+        flex-direction: column;
+    }
+
+    .vign {
+        width: 100%;
+    }
+
+    .super_pouvoir {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .activer {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .zeubi {
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .para_widget {
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .logo_footer {
+        margin-left: 0;
+    }
+
+    .contact_footer {
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .vous_etes {
+        margin-left: 20%;
+    }
+}
